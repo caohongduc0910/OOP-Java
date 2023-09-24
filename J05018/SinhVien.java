@@ -4,10 +4,10 @@ package J05018;
 
 public class SinhVien {
     private String id, name, rank;
-    private float d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, dtb;
+    private double d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, dtb;
     static int cnt = 1;
 
-    public SinhVien(String name, float d1, float d2, float d3, float d4, float d5, float d6, float d7, float d8, float d9, float d10) {
+    public SinhVien(String name, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10) {
         this.id = "HS0" + cnt;
         cnt++;
         this.name = name;
@@ -22,7 +22,10 @@ public class SinhVien {
         this.d9 = d9;
         this.d10 = d10;
         this.dtb = (d1 * 2 + d2 * 2 + d3 + d4 + d5 + d6 + d7 + d8 + d9 + d10) / 12;
+        this.dtb = (double) Math.round((double) (this.dtb) * 10) / 10;
     }
+    
+    
     
     public void solve(){
         if(this.dtb >= 9)
@@ -40,7 +43,7 @@ public class SinhVien {
         return id;
     }
 
-    public float getDtb() {
+    public double getDtb() {
         return dtb;
     }
 

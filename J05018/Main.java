@@ -12,9 +12,9 @@ public class Main {
         List <SinhVien> v = new ArrayList<>();
         while(t-- > 0){
             sc.nextLine();
-            v.add(new SinhVien(sc.nextLine(), sc.nextFloat(), sc.nextFloat(), sc.nextFloat(), sc.nextFloat()
-            , sc.nextFloat(), sc.nextFloat(), sc.nextFloat(), sc.nextFloat()
-            , sc.nextFloat(), sc.nextFloat()));
+            v.add(new SinhVien(sc.nextLine(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble()
+            , sc.nextDouble(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble(), sc.nextDouble()
+            , sc.nextDouble(), sc.nextDouble()));
         }
         Collections.sort(v, new SortByGPA());
         for(SinhVien x : v){
